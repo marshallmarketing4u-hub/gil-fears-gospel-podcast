@@ -1,0 +1,14 @@
+{
+  "name": "gil-fears-gospel-podcast",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Landing page for The Gil Fears Gospel Podcast",
+  "scripts": {
+    "serve": "node serve.mjs . 3000",
+    "screenshot": "node screenshot.mjs http://localhost:3000"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.40.0"
+  }
+}
