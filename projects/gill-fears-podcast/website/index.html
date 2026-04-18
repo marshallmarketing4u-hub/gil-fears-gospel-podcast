@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Gil Fears Gospel Podcast</title>
-  <meta name="description" content="Inspiring gospel conversations, faith stories, and Spirit-led teachings with Gil Fears. Available on Apple Podcasts, Spotify, and YouTube.">
+  <title>The Gil Fears "It's A New Day" Gospel Podcast</title>
+  <meta name="description" content="It's a new day. Inspiring gospel conversations, faith stories, and Spirit-led teachings with Gil Fears. Available on Apple Podcasts, Spotify, and YouTube.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -419,7 +419,7 @@
 <header class="navbar-blur fixed top-0 left-0 right-0 z-50">
   <nav class="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between h-16 md:h-18" style="height:68px">
     <!-- Logo + Name -->
-    <a href="#" class="flex items-center gap-3" style="text-decoration:none" aria-label="The Gil Fears Gospel Podcast home">
+    <a href="#" class="flex items-center gap-3" style="text-decoration:none" aria-label="The Gil Fears It's A New Day Gospel Podcast home">
       <!-- SVG Logo 40x40 — Sunrise Cityscape -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="40" height="40" aria-hidden="true">
         <defs>
@@ -452,9 +452,9 @@
         <!-- Sparkle -->
         <path d="M95,38 L96.5,41 L100,38 L96.5,35 Z" fill="#E8C86A" opacity="0.8"/>
       </svg>
-      <span style="font-family:'Playfair Display',Georgia,serif; font-size:17px; font-weight:700; color:#C9A84C; letter-spacing:-0.02em; line-height:1.1; white-space:nowrap">
+      <span style="font-family:'Playfair Display',Georgia,serif; font-size:17px; font-weight:700; color:#C9A84C; letter-spacing:-0.02em; line-height:1.2; white-space:nowrap">
         Gil Fears<br>
-        <span style="font-size:11px; font-weight:400; color:rgba(201,168,76,0.75); letter-spacing:0.06em; font-style:italic">Gospel Podcast</span>
+        <span style="font-size:10px; font-weight:400; color:rgba(201,168,76,0.85); letter-spacing:0.04em; font-style:italic">"It's A New Day" Gospel Podcast</span>
       </span>
     </a>
 
@@ -490,7 +490,163 @@
 </header>
 
 <!-- ===================== HERO ===================== -->
-<section class="grain relative min-h-screen flex items-center" style="padding-top:68px; background: radial-gradient(ellipse 90% 65% at 20% 30%, rgba(71,75,86,0.65) 0%, transparent 70%), radial-gradient(ellipse 55% 45% at 80% 70%, rgba(46,50,60,0.45) 0%, transparent 65%), radial-gradient(ellipse 110% 55% at 50% 0%, rgba(94,98,112,0.18) 0%, transparent 55%), linear-gradient(to bottom, #252830 0%, #2D3038 55%, #252830 100%);">
+<section class="grain relative min-h-screen flex items-center" style="padding-top:68px; overflow:hidden; background:#12141a;">
+
+  <!-- Sunrise Cityscape Background -->
+  <div style="position:absolute; inset:0; z-index:0; pointer-events:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%; display:block">
+      <defs>
+        <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0e1018"/>
+          <stop offset="35%" stop-color="#1e2230"/>
+          <stop offset="58%" stop-color="#3d2a18"/>
+          <stop offset="72%" stop-color="#7a4820"/>
+          <stop offset="83%" stop-color="#b8742a"/>
+          <stop offset="92%" stop-color="#C9A84C" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#F0D880" stop-opacity="0.85"/>
+        </linearGradient>
+        <radialGradient id="sun-halo" cx="50%" cy="78%" r="38%">
+          <stop offset="0%"   stop-color="#F5E070" stop-opacity="0.85"/>
+          <stop offset="25%"  stop-color="#C9A84C" stop-opacity="0.55"/>
+          <stop offset="60%"  stop-color="#7a4820" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#12141a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="sun-core" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#FFFBE0"/>
+          <stop offset="60%"  stop-color="#F5E070"/>
+          <stop offset="100%" stop-color="#C9A84C"/>
+        </radialGradient>
+        <linearGradient id="city-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stop-color="#2E323C"/>
+          <stop offset="100%" stop-color="#1a1d26"/>
+        </linearGradient>
+        <linearGradient id="read-overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stop-color="#12141a" stop-opacity="0.70"/>
+          <stop offset="45%"  stop-color="#12141a" stop-opacity="0.40"/>
+          <stop offset="72%"  stop-color="#12141a" stop-opacity="0.28"/>
+          <stop offset="100%" stop-color="#12141a" stop-opacity="0.72"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Sky -->
+      <rect width="1440" height="900" fill="url(#sky-grad)"/>
+
+      <!-- Horizon sun halo -->
+      <ellipse cx="720" cy="702" rx="520" ry="260" fill="url(#sun-halo)"/>
+
+      <!-- Sun rays (long thin lines) -->
+      <g stroke="#F0D880" stroke-linecap="round" opacity="0.55">
+        <line x1="720" y1="702" x2="720" y2="580" stroke-width="2.5"/>
+        <line x1="720" y1="702" x2="775" y2="584" stroke-width="2"/>
+        <line x1="720" y1="702" x2="665" y2="584" stroke-width="2"/>
+        <line x1="720" y1="702" x2="830" y2="598" stroke-width="1.5"/>
+        <line x1="720" y1="702" x2="610" y2="598" stroke-width="1.5"/>
+        <line x1="720" y1="702" x2="880" y2="622" stroke-width="1.2"/>
+        <line x1="720" y1="702" x2="560" y2="622" stroke-width="1.2"/>
+        <line x1="720" y1="702" x2="930" y2="655" stroke-width="1"/>
+        <line x1="720" y1="702" x2="510" y2="655" stroke-width="1"/>
+        <line x1="720" y1="702" x2="970" y2="690" stroke-width="0.8"/>
+        <line x1="720" y1="702" x2="470" y2="690" stroke-width="0.8"/>
+      </g>
+
+      <!-- Sun disk (horizon-kissing) -->
+      <circle cx="720" cy="710" r="62" fill="url(#sun-core)" opacity="0.95"/>
+      <circle cx="720" cy="710" r="44" fill="#FFFBE0"/>
+
+      <!-- Horizon glow bar -->
+      <rect x="0" y="698" width="1440" height="3" fill="#C9A84C" opacity="0.4" rx="1"/>
+
+      <!-- Clouds (silhouette style, thin wisps) -->
+      <g fill="none" stroke="rgba(201,168,76,0.18)" stroke-width="1.5">
+        <ellipse cx="260" cy="580" rx="90" ry="22"/>
+        <ellipse cx="320" cy="568" rx="55" ry="16"/>
+        <ellipse cx="1100" cy="595" rx="80" ry="20"/>
+        <ellipse cx="1155" cy="582" rx="50" ry="14"/>
+        <ellipse cx="520" cy="560" rx="70" ry="18"/>
+        <ellipse cx="940" cy="548" rx="65" ry="17"/>
+      </g>
+
+      <!-- City silhouette fill -->
+      <path d="
+        M0,900 L0,760
+        L50,760 L50,730 L70,730 L70,708 L88,708 L88,690 L106,690 L106,708 L122,708 L122,720
+        L150,720 L150,675 L162,675 L162,652 L174,652 L174,638 L186,638 L186,652 L198,652 L198,675 L218,675
+        L218,710 L238,710 L238,688 L252,688 L252,672 L266,672 L266,658 L280,658 L280,672 L294,672 L294,688 L314,688
+        L314,720 L335,720 L335,685 L348,685 L348,665 L358,665 L358,650 L366,650 L366,638 L374,638 L374,625 L384,625 L384,615 L394,615 L394,625 L404,625 L404,638 L412,638 L412,650 L420,650 L420,665 L430,665 L430,685 L448,685
+        L448,710 L468,710 L468,678 L480,678 L480,660 L492,660 L492,645 L500,645 L500,632 L508,632 L508,620 L518,620 L518,610 L528,610 L528,600 L542,600 L542,610 L552,610 L552,620 L562,620 L562,632 L570,632 L570,645 L578,645 L578,660 L590,660 L590,678 L608,678
+        L608,720 L628,720 L628,685 L642,685 L642,665 L655,665 L655,648 L665,648 L665,635 L675,635 L675,622 L685,622 L685,612 L695,612 L695,600 L705,600 L705,588 L718,588 L718,578 L728,578 L728,566 L738,566 L738,556 L750,556 L750,566 L762,566 L762,578 L772,578 L772,588 L782,588 L782,600 L792,600 L792,612 L802,612 L802,622 L812,622 L812,635 L822,635 L822,648 L832,648 L832,665 L845,665 L845,685 L858,685 L858,720
+        L878,720 L878,695 L892,695 L892,675 L904,675 L904,658 L916,658 L916,645 L926,645 L926,633 L938,633 L938,622 L950,622 L950,633 L962,633 L962,645 L972,645 L972,658 L984,658 L984,675 L996,675 L996,695 L1012,695
+        L1012,718 L1032,718 L1032,688 L1046,688 L1046,668 L1058,668 L1058,652 L1070,652 L1070,638 L1082,638 L1082,652 L1094,652 L1094,668 L1108,668 L1108,688 L1126,688
+        L1126,715 L1146,715 L1146,682 L1160,682 L1160,662 L1174,662 L1174,648 L1188,648 L1188,662 L1202,662 L1202,682 L1218,682
+        L1218,730 L1238,730 L1238,705 L1252,705 L1252,685 L1268,685 L1268,705 L1288,705
+        L1288,755 L1308,755 L1308,728 L1328,728 L1328,742 L1358,742 L1358,762
+        L1440,762 L1440,900 Z
+      " fill="url(#city-grad)"/>
+
+      <!-- City skyline outline highlight -->
+      <path d="
+        M0,760
+        L50,760 L50,730 L70,730 L70,708 L88,708 L88,690 L106,690 L106,708 L122,708 L122,720
+        L150,720 L150,675 L162,675 L162,652 L174,652 L174,638 L186,638 L186,652 L198,652 L198,675 L218,675
+        L218,710 L238,710 L238,688 L252,688 L252,672 L266,672 L266,658 L280,658 L280,672 L294,672 L294,688 L314,688
+        L314,720 L335,720 L335,685 L348,685 L348,665 L358,665 L358,650 L366,650 L366,638 L374,638 L374,625 L384,625 L384,615 L394,615 L394,625 L404,625 L404,638 L412,638 L412,650 L420,650 L420,665 L430,665 L430,685 L448,685
+        L448,710 L468,710 L468,678 L480,678 L480,660 L492,660 L492,645 L500,645 L500,632 L508,632 L508,620 L518,620 L518,610 L528,610 L528,600 L542,600 L542,610 L552,610 L552,620 L562,620 L562,632 L570,632 L570,645 L578,645 L578,660 L590,660 L590,678 L608,678
+        L608,720 L628,720 L628,685 L642,685 L642,665 L655,665 L655,648 L665,648 L665,635 L675,635 L675,622 L685,622 L685,612 L695,612 L695,600 L705,600 L705,588 L718,588 L718,578 L728,578 L728,566 L738,566 L738,556 L750,556 L750,566 L762,566 L762,578 L772,578 L772,588 L782,588 L782,600 L792,600 L792,612 L802,612 L802,622 L812,622 L812,635 L822,635 L822,648 L832,648 L832,665 L845,665 L845,685 L858,685 L858,720
+        L878,720 L878,695 L892,695 L892,675 L904,675 L904,658 L916,658 L916,645 L926,645 L926,633 L938,633 L938,622 L950,622 L950,633 L962,633 L962,645 L972,645 L972,658 L984,658 L984,675 L996,675 L996,695 L1012,695
+        L1012,718 L1032,718 L1032,688 L1046,688 L1046,668 L1058,668 L1058,652 L1070,652 L1070,638 L1082,638 L1082,652 L1094,652 L1094,668 L1108,668 L1108,688 L1126,688
+        L1126,715 L1146,715 L1146,682 L1160,682 L1160,662 L1174,662 L1174,648 L1188,648 L1188,662 L1202,662 L1202,682 L1218,682
+        L1218,730 L1238,730 L1238,705 L1252,705 L1252,685 L1268,685 L1268,705 L1288,705
+        L1288,755 L1308,755 L1308,728 L1328,728 L1328,742 L1358,742 L1358,762 L1440,762
+      " fill="none" stroke="rgba(201,168,76,0.22)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- Building windows — scattered warm lights -->
+      <g fill="#F0D880">
+        <rect x="156" y="662" width="4" height="5" opacity="0.65"/>
+        <rect x="164" y="662" width="4" height="5" opacity="0.40"/>
+        <rect x="156" y="672" width="4" height="5" opacity="0.35"/>
+        <rect x="258" y="680" width="4" height="5" opacity="0.70"/>
+        <rect x="274" y="668" width="4" height="5" opacity="0.50"/>
+        <rect x="352" y="673" width="4" height="5" opacity="0.60"/>
+        <rect x="368" y="653" width="4" height="5" opacity="0.45"/>
+        <rect x="378" y="642" width="4" height="5" opacity="0.55"/>
+        <rect x="390" y="630" width="4" height="5" opacity="0.65"/>
+        <rect x="402" y="642" width="4" height="5" opacity="0.45"/>
+        <rect x="504" y="638" width="4" height="5" opacity="0.70"/>
+        <rect x="516" y="626" width="4" height="5" opacity="0.55"/>
+        <rect x="530" y="614" width="4" height="5" opacity="0.60"/>
+        <rect x="544" y="618" width="4" height="5" opacity="0.45"/>
+        <rect x="556" y="628" width="4" height="5" opacity="0.50"/>
+        <rect x="660" y="600" width="4" height="5" opacity="0.80"/>
+        <rect x="672" y="614" width="4" height="5" opacity="0.65"/>
+        <rect x="684" y="622" width="4" height="5" opacity="0.55"/>
+        <rect x="696" y="610" width="4" height="5" opacity="0.70"/>
+        <rect x="708" y="596" width="4" height="5" opacity="0.60"/>
+        <rect x="724" y="580" width="4" height="5" opacity="0.75"/>
+        <rect x="744" y="572" width="4" height="5" opacity="0.85"/>
+        <rect x="758" y="580" width="4" height="5" opacity="0.75"/>
+        <rect x="772" y="596" width="4" height="5" opacity="0.60"/>
+        <rect x="784" y="610" width="4" height="5" opacity="0.70"/>
+        <rect x="796" y="622" width="4" height="5" opacity="0.55"/>
+        <rect x="808" y="614" width="4" height="5" opacity="0.65"/>
+        <rect x="820" y="600" width="4" height="5" opacity="0.80"/>
+        <rect x="930" y="640" width="4" height="5" opacity="0.60"/>
+        <rect x="946" y="630" width="4" height="5" opacity="0.70"/>
+        <rect x="958" y="640" width="4" height="5" opacity="0.55"/>
+        <rect x="1058" y="660" width="4" height="5" opacity="0.55"/>
+        <rect x="1072" y="646" width="4" height="5" opacity="0.65"/>
+        <rect x="1086" y="658" width="4" height="5" opacity="0.50"/>
+        <rect x="1152" y="670" width="4" height="5" opacity="0.60"/>
+        <rect x="1168" y="658" width="4" height="5" opacity="0.50"/>
+        <rect x="1184" y="668" width="4" height="5" opacity="0.55"/>
+        <rect x="1246" y="693" width="4" height="5" opacity="0.45"/>
+        <rect x="1260" y="692" width="4" height="5" opacity="0.40"/>
+      </g>
+
+      <!-- Readability overlay -->
+      <rect width="1440" height="900" fill="url(#read-overlay)"/>
+    </svg>
+  </div>
+
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 w-full py-20 md:py-28">
     <div class="hero-grid">
 
@@ -498,13 +654,14 @@
       <div class="hero-text">
         <div class="eyebrow mb-6" style="justify-content:flex-start; gap:8px">
           <span style="width:32px; height:1px; background:var(--gold); opacity:0.6; flex:none"></span>
-          <span>The Gospel Podcast</span>
+          <span>"It's A New Day" Gospel Podcast</span>
           <span style="width:32px; height:1px; background:var(--gold); opacity:0.6; flex:none"></span>
         </div>
 
-        <h1 style="font-family:'Playfair Display',Georgia,serif; font-weight:900; letter-spacing:-0.03em; line-height:1.04; margin-bottom:24px;">
+        <h1 style="font-family:'Playfair Display',Georgia,serif; font-weight:900; letter-spacing:-0.03em; line-height:1.08; margin-bottom:24px;">
           <span style="font-size:clamp(46px,6.5vw,88px); color:white; display:block">The Gil Fears</span>
-          <span class="gold-text" style="font-size:clamp(46px,6.5vw,88px); display:block">Gospel Podcast</span>
+          <span class="gold-text" style="font-size:clamp(32px,4.2vw,64px); display:block; font-style:italic; letter-spacing:-0.01em">"It's A New Day"</span>
+          <span style="font-size:clamp(26px,3.2vw,48px); color:rgba(255,255,255,0.82); display:block; font-weight:700; letter-spacing:0.01em">Gospel Podcast</span>
         </h1>
 
         <p style="font-family:'Inter',sans-serif; font-size:18px; line-height:1.75; color:rgba(255,255,255,0.72); max-width:500px; margin-bottom:36px;">
@@ -549,7 +706,7 @@
             <!-- Badge -->
             <div style="position:absolute; bottom:16px; left:16px; right:16px;">
               <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:white; text-shadow:0 2px 8px rgba(0,0,0,0.6)">Gil Fears</div>
-              <div style="font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); font-weight:500">Gospel Podcast</div>
+              <div style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-weight:500">"It's A New Day" Gospel Podcast</div>
             </div>
           </div>
         </div>
@@ -585,7 +742,7 @@
           Faith-Forward Conversations That Move You
         </h2>
         <p style="font-family:'Inter',sans-serif; font-size:16px; line-height:1.8; color:rgba(255,255,255,0.75); margin-bottom:28px">
-          The Gil Fears Gospel Podcast is a weekly journey into the heart of the gospel. Each episode brings raw, authentic conversations about faith, purpose, and the power of God's word in everyday life.
+          The Gil Fears "It's A New Day" Gospel Podcast is a weekly journey into the heart of the gospel. Each episode brings raw, authentic conversations about faith, purpose, and the power of God's word in everyday life.
         </p>
         <div class="pull-quote" style="margin-bottom:28px">
           <p style="font-family:'Playfair Display',serif; font-size:19px; font-style:italic; line-height:1.6; color:rgba(255,255,255,0.9)">
@@ -593,7 +750,7 @@
           </p>
         </div>
         <p style="font-family:'Inter',sans-serif; font-size:15px; line-height:1.8; color:rgba(255,255,255,0.65)">
-          Whether you're a lifelong believer or just beginning your spiritual journey, the Gil Fears Gospel Podcast is your weekly companion for growth, healing, and inspiration.
+          Whether you're a lifelong believer or just beginning your spiritual journey, the Gil Fears "It's A New Day" Gospel Podcast is your weekly companion for growth, healing, and inspiration.
         </p>
       </div>
 
@@ -889,7 +1046,7 @@
           </svg>
           <div>
             <div style="font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--gold)">Gil Fears</div>
-            <div style="font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.06em; color:rgba(201,168,76,0.65); font-style:italic">Gospel Podcast</div>
+            <div style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.04em; color:rgba(201,168,76,0.75); font-style:italic">"It's A New Day" Gospel Podcast</div>
           </div>
         </div>
         <p style="font-family:'Inter',sans-serif; font-size:14px; line-height:1.7; color:rgba(255,255,255,0.45); max-width:220px">
@@ -952,7 +1109,7 @@
     <!-- Copyright bar -->
     <div style="border-top:1px solid rgba(255,255,255,0.06); padding-top:24px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center">
       <p style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.3)">
-        © 2026 The Gil Fears Gospel Podcast. All rights reserved.
+        © 2026 The Gil Fears "It's A New Day" Gospel Podcast. All rights reserved.
       </p>
       <div style="display:flex; gap:20px">
         <a href="#" class="footer-link" style="font-size:13px">Privacy Policy</a>
