@@ -521,9 +521,9 @@
           <stop offset="100%" stop-color="#E08820"/>
         </radialGradient>
         <linearGradient id="city-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#1a1e2c"/>
-          <stop offset="55%"  stop-color="#121420"/>
-          <stop offset="100%" stop-color="#0c0e16"/>
+          <stop offset="0%"   stop-color="#2e3858"/>
+          <stop offset="50%"  stop-color="#1e2640"/>
+          <stop offset="100%" stop-color="#141c30"/>
         </linearGradient>
         <linearGradient id="haze-grad" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%"   stop-color="#c85818" stop-opacity="0"/>
@@ -538,10 +538,12 @@
           <feGaussianBlur stdDeviation="28"/>
         </filter>
         <linearGradient id="read-overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#12141a" stop-opacity="0.74"/>
-          <stop offset="40%"  stop-color="#12141a" stop-opacity="0.36"/>
-          <stop offset="68%"  stop-color="#12141a" stop-opacity="0.18"/>
-          <stop offset="100%" stop-color="#12141a" stop-opacity="0.70"/>
+          <stop offset="0%"   stop-color="#12141a" stop-opacity="0.72"/>
+          <stop offset="32%"  stop-color="#12141a" stop-opacity="0.28"/>
+          <stop offset="55%"  stop-color="#12141a" stop-opacity="0.04"/>
+          <stop offset="72%"  stop-color="#12141a" stop-opacity="0.00"/>
+          <stop offset="88%"  stop-color="#12141a" stop-opacity="0.20"/>
+          <stop offset="100%" stop-color="#12141a" stop-opacity="0.60"/>
         </linearGradient>
       </defs>
 
@@ -579,7 +581,7 @@
         L1444,900 Z
       " fill="url(#city-grad)"/>
 
-      <!-- Rooftop sunrise rim light -->
+      <!-- Rooftop sunrise rim light — warm amber catches building tops -->
       <path d="
         M0,815 L80,815 L80,796 L158,796 L158,815
         L196,815 L196,774 L288,774 L288,790 L332,790 L332,752 L424,752 L424,768
@@ -589,7 +591,32 @@
         L878,626 L924,626 L924,650 L942,650 L942,676
         L1004,676 L1004,704 L1092,704 L1092,730 L1178,730 L1178,768
         L1216,768 L1216,752 L1308,752 L1308,790 L1352,790 L1352,774 L1444,774
-      " fill="none" stroke="rgba(220,150,60,0.12)" stroke-width="1.5" stroke-linejoin="round"/>
+      " fill="none" stroke="rgba(220,150,60,0.30)" stroke-width="1.5" stroke-linejoin="round"/>
+
+      <!-- Inter-building gap lines — thin vertical slivers of sky visible between masses -->
+      <g stroke="rgba(80,60,30,0.22)" stroke-width="1">
+        <line x1="80"   y1="796" x2="80"   y2="900"/>
+        <line x1="158"  y1="796" x2="158"  y2="900"/>
+        <line x1="196"  y1="774" x2="196"  y2="900"/>
+        <line x1="288"  y1="774" x2="288"  y2="900"/>
+        <line x1="332"  y1="752" x2="332"  y2="900"/>
+        <line x1="424"  y1="752" x2="424"  y2="900"/>
+        <line x1="462"  y1="730" x2="462"  y2="900"/>
+        <line x1="548"  y1="730" x2="548"  y2="900"/>
+        <line x1="636"  y1="704" x2="636"  y2="900"/>
+        <line x1="698"  y1="676" x2="698"  y2="900"/>
+        <line x1="716"  y1="650" x2="716"  y2="900"/>
+        <line x1="762"  y1="626" x2="762"  y2="900"/>
+        <line x1="878"  y1="626" x2="878"  y2="900"/>
+        <line x1="924"  y1="650" x2="924"  y2="900"/>
+        <line x1="942"  y1="676" x2="942"  y2="900"/>
+        <line x1="1004" y1="704" x2="1004" y2="900"/>
+        <line x1="1092" y1="730" x2="1092" y2="900"/>
+        <line x1="1178" y1="752" x2="1178" y2="900"/>
+        <line x1="1216" y1="768" x2="1216" y2="900"/>
+        <line x1="1308" y1="752" x2="1308" y2="900"/>
+        <line x1="1352" y1="774" x2="1352" y2="900"/>
+      </g>
 
       <!-- Antenna on main tower crown -->
       <line x1="820" y1="582" x2="820" y2="558" stroke="#141820" stroke-width="2.5"/>
