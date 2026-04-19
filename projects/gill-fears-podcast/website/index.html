@@ -559,13 +559,13 @@
       <ellipse cx="720" cy="600" rx="480" ry="240" fill="url(#sun-halo)"/>
 
       <!-- Sun outer corona (very soft, blurred) -->
-      <ellipse cx="720" cy="600" rx="110" ry="100" fill="#FFB820" opacity="0.38" filter="url(#sun-corona)"/>
-      <ellipse cx="720" cy="600" rx="75"  ry="68"  fill="#FFD040" opacity="0.45" filter="url(#sun-corona)"/>
+      <ellipse cx="720" cy="600" rx="132" ry="120" fill="#FFB820" opacity="0.38" filter="url(#sun-corona)"/>
+      <ellipse cx="720" cy="600" rx="90"  ry="82"  fill="#FFD040" opacity="0.45" filter="url(#sun-corona)"/>
 
       <!-- Sun disk — slightly oblate (atmospheric refraction near horizon) -->
-      <ellipse cx="720" cy="600" rx="56" ry="52" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
+      <ellipse cx="720" cy="600" rx="67" ry="62" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
       <!-- Bright core -->
-      <ellipse cx="720" cy="597" rx="32" ry="29" fill="#FFFFF8" opacity="0.88"/>
+      <ellipse cx="720" cy="597" rx="38" ry="35" fill="#FFFFF8" opacity="0.88"/>
 
       <!-- Atmospheric haze band at horizon -->
       <rect x="0" y="520" width="1440" height="130" fill="url(#haze-grad)"/>
@@ -583,80 +583,123 @@
         <ellipse cx="940" cy="548" rx="65" ry="17"/>
       </g>
 
-      <!-- City silhouette fill -->
+      <!-- Far background city — atmospheric perspective, lighter/hazier -->
+      <path d="M0,848 L0,800 L70,800 L70,785 L145,785 L145,797 L208,797 L208,778 L272,778 L272,767 L332,767 L332,780 L392,780 L392,758 L448,758 L448,743 L508,743 L508,726 L562,726 L562,710 L608,710 L608,698 L655,698 L655,708 L700,708 L700,695 L748,695 L748,708 L795,708 L795,696 L842,696 L842,710 L892,710 L892,725 L944,725 L944,740 L998,740 L998,756 L1055,756 L1055,770 L1115,770 L1115,782 L1175,782 L1175,795 L1238,795 L1238,806 L1302,806 L1302,795 L1365,795 L1365,810 L1440,810 L1440,848 Z" fill="#1e2235" opacity="0.60"/>
+
+      <!-- Near foreground city — "Anywhere USA" downtown skyline -->
       <path d="
-        M0,900 L0,760
-        L50,760 L50,730 L70,730 L70,708 L88,708 L88,690 L106,690 L106,708 L122,708 L122,720
-        L150,720 L150,675 L162,675 L162,652 L174,652 L174,638 L186,638 L186,652 L198,652 L198,675 L218,675
-        L218,710 L238,710 L238,688 L252,688 L252,672 L266,672 L266,658 L280,658 L280,672 L294,672 L294,688 L314,688
-        L314,720 L335,720 L335,685 L348,685 L348,665 L358,665 L358,650 L366,650 L366,638 L374,638 L374,625 L384,625 L384,615 L394,615 L394,625 L404,625 L404,638 L412,638 L412,650 L420,650 L420,665 L430,665 L430,685 L448,685
-        L448,710 L468,710 L468,678 L480,678 L480,660 L492,660 L492,645 L500,645 L500,632 L508,632 L508,620 L518,620 L518,610 L528,610 L528,600 L542,600 L542,610 L552,610 L552,620 L562,620 L562,632 L570,632 L570,645 L578,645 L578,660 L590,660 L590,678 L608,678
-        L608,720 L628,720 L628,685 L642,685 L642,665 L655,665 L655,648 L665,648 L665,635 L675,635 L675,622 L685,622 L685,612 L695,612 L695,600 L705,600 L705,588 L718,588 L718,578 L728,578 L728,566 L738,566 L738,556 L750,556 L750,566 L762,566 L762,578 L772,578 L772,588 L782,588 L782,600 L792,600 L792,612 L802,612 L802,622 L812,622 L812,635 L822,635 L822,648 L832,648 L832,665 L845,665 L845,685 L858,685 L858,720
-        L878,720 L878,695 L892,695 L892,675 L904,675 L904,658 L916,658 L916,645 L926,645 L926,633 L938,633 L938,622 L950,622 L950,633 L962,633 L962,645 L972,645 L972,658 L984,658 L984,675 L996,675 L996,695 L1012,695
-        L1012,718 L1032,718 L1032,688 L1046,688 L1046,668 L1058,668 L1058,652 L1070,652 L1070,638 L1082,638 L1082,652 L1094,652 L1094,668 L1108,668 L1108,688 L1126,688
-        L1126,715 L1146,715 L1146,682 L1160,682 L1160,662 L1174,662 L1174,648 L1188,648 L1188,662 L1202,662 L1202,682 L1218,682
-        L1218,730 L1238,730 L1238,705 L1252,705 L1252,685 L1268,685 L1268,705 L1288,705
-        L1288,755 L1308,755 L1308,728 L1328,728 L1328,742 L1358,742 L1358,762
-        L1440,762 L1440,900 Z
+        M0,900 L0,808
+        L52,808 L52,792 L90,792 L90,806 L122,806 L122,786 L155,786 L155,800 L180,800 L180,778
+        L202,778 L202,758 L230,758 L230,773 L258,773 L258,744 L285,744 L285,760 L312,760 L312,732 L338,732 L338,748 L362,748 L362,722 L382,722
+        L382,705 L408,705 L408,720 L434,720 L434,692 L458,692 L458,674 L480,674 L480,655 L502,655 L502,638 L524,638 L524,619 L542,619 L542,602 L556,602
+        L556,584 L568,584 L568,566 L580,566 L580,549 L592,549 L592,533 L604,533 L604,517 L615,517 L615,500 L626,500 L626,485 L638,485
+        L638,470 L646,470 L646,455 L654,455 L654,468 L663,468
+        L663,476 L672,476 L672,460 L681,460 L681,472 L690,472
+        L690,458 L698,458 L698,444 L706,444 L706,456 L715,456
+        L715,468 L724,468 L724,480 L734,480 L734,465 L742,465 L742,478 L752,478
+        L752,494 L765,494 L765,510 L778,510
+        L778,526 L792,526 L792,542 L806,542 L806,558 L820,558 L820,574 L836,574 L836,592 L852,592 L852,608 L868,608 L868,626 L885,626 L885,643 L902,643 L902,660 L920,660
+        L920,674 L940,674 L940,660 L962,660 L962,676 L984,676 L984,692 L1008,692 L1008,708 L1032,708 L1032,725 L1058,725 L1058,740 L1082,740 L1082,754 L1108,754 L1108,768
+        L1130,768 L1130,754 L1155,754 L1155,768 L1180,768 L1180,782 L1205,782 L1205,796 L1232,796 L1232,808 L1260,808 L1260,794 L1288,794 L1288,808 L1318,808 L1318,796 L1350,796 L1350,812 L1390,812 L1390,800 L1440,800
+        L1440,900 Z
       " fill="url(#city-grad)"/>
 
-      <!-- Skyline rim light: warm sunrise catch on rooftops, very subtle -->
-      <path d="
-        M0,760
-        L50,760 L50,730 L70,730 L70,708 L88,708 L88,690 L106,690 L106,708 L122,708 L122,720
-        L150,720 L150,675 L162,675 L162,652 L174,652 L174,638 L186,638 L186,652 L198,652 L198,675 L218,675
-        L218,710 L238,710 L238,688 L252,688 L252,672 L266,672 L266,658 L280,658 L280,672 L294,672 L294,688 L314,688
-        L314,720 L335,720 L335,685 L348,685 L348,665 L358,665 L358,650 L366,650 L366,638 L374,638 L374,625 L384,625 L384,615 L394,615 L394,625 L404,625 L404,638 L412,638 L412,650 L420,650 L420,665 L430,665 L430,685 L448,685
-        L448,710 L468,710 L468,678 L480,678 L480,660 L492,660 L492,645 L500,645 L500,632 L508,632 L508,620 L518,620 L518,610 L528,610 L528,600 L542,600 L542,610 L552,610 L552,620 L562,620 L562,632 L570,632 L570,645 L578,645 L578,660 L590,660 L590,678 L608,678
-        L608,720 L628,720 L628,685 L642,685 L642,665 L655,665 L655,648 L665,648 L665,635 L675,635 L675,622 L685,622 L685,612 L695,612 L695,600 L705,600 L705,588 L718,588 L718,578 L728,578 L728,566 L738,566 L738,556 L750,556 L750,566 L762,566 L762,578 L772,578 L772,588 L782,588 L782,600 L792,600 L792,612 L802,612 L802,622 L812,622 L812,635 L822,635 L822,648 L832,648 L832,665 L845,665 L845,685 L858,685 L858,720
-        L878,720 L878,695 L892,695 L892,675 L904,675 L904,658 L916,658 L916,645 L926,645 L926,633 L938,633 L938,622 L950,622 L950,633 L962,633 L962,645 L972,645 L972,658 L984,658 L984,675 L996,675 L996,695 L1012,695
-        L1012,718 L1032,718 L1032,688 L1046,688 L1046,668 L1058,668 L1058,652 L1070,652 L1070,638 L1082,638 L1082,652 L1094,652 L1094,668 L1108,668 L1108,688 L1126,688
-        L1126,715 L1146,715 L1146,682 L1160,682 L1160,662 L1174,662 L1174,648 L1188,648 L1188,662 L1202,662 L1202,682 L1218,682
-        L1218,730 L1238,730 L1238,705 L1252,705 L1252,685 L1268,685 L1268,705 L1288,705
-        L1288,755 L1308,755 L1308,728 L1328,728 L1328,742 L1358,742 L1358,762 L1440,762
-      " fill="none" stroke="rgba(210,140,60,0.10)" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- Signature tower antenna -->
+      <rect x="701" y="418" width="3" height="26" fill="#161824"/>
+      <circle cx="702.5" cy="418" r="2.5" fill="#161824"/>
 
-      <!-- Building windows — scattered warm lights -->
+      <!-- Water tower (left mid-rise district) -->
+      <g fill="#161824">
+        <rect x="338" y="722" width="16" height="10"/>
+        <polygon points="334,722 358,722 354,715 342,715"/>
+        <rect x="342" y="732" width="2.5" height="9"/>
+        <rect x="348" y="732" width="2.5" height="9"/>
+        <rect x="354" y="732" width="2.5" height="9"/>
+      </g>
+
+      <!-- Rooftop warm rim catch — atmospheric, very faint -->
+      <path d="
+        M0,808 L52,808 L52,792 L90,792 L90,806 L122,806 L122,786 L155,786 L155,800 L180,800 L180,778
+        L202,778 L202,758 L230,758 L230,773 L258,773 L258,744 L285,744 L285,760 L312,760 L312,732 L338,732 L338,748 L362,748 L362,722 L382,722
+        L382,705 L408,705 L408,720 L434,720 L434,692 L458,692 L458,674 L480,674 L480,655 L502,655 L502,638 L524,638 L524,619 L542,619 L542,602 L556,602
+        L556,584 L568,584 L568,566 L580,566 L580,549 L592,549 L592,533 L604,533 L604,517 L615,517 L615,500 L626,500 L626,485 L638,485
+        L638,470 L646,470 L646,455 L654,455 L654,468 L663,468
+        L663,476 L672,476 L672,460 L681,460 L681,472 L690,472
+        L690,458 L698,458 L698,444 L706,444 L706,456 L715,456
+        L715,468 L724,468 L724,480 L734,480 L734,465 L742,465 L742,478 L752,478
+        L752,494 L765,494 L765,510 L778,510
+        L778,526 L792,526 L792,542 L806,542 L806,558 L820,558 L820,574 L836,574 L836,592 L852,592 L852,608 L868,608 L868,626 L885,626 L885,643 L902,643 L902,660 L920,660
+        L920,674 L940,674 L940,660 L962,660 L962,676 L984,676 L984,692 L1008,692 L1008,708 L1032,708 L1032,725 L1058,725 L1058,740 L1082,740 L1082,754 L1108,754 L1108,768
+        L1130,768 L1130,754 L1155,754 L1155,768 L1180,768 L1180,782 L1205,782 L1205,796 L1232,796 L1232,808 L1260,808 L1260,794 L1288,794 L1288,808 L1318,808 L1318,796 L1350,796 L1350,812 L1390,812 L1390,800 L1440,800
+      " fill="none" stroke="rgba(210,145,55,0.09)" stroke-width="1" stroke-linejoin="round"/>
+
+      <!-- Building windows — scattered warm lights (matched to new skyline) -->
       <g fill="#F0D880">
-        <rect x="156" y="662" width="4" height="5" opacity="0.65"/>
-        <rect x="164" y="662" width="4" height="5" opacity="0.40"/>
-        <rect x="156" y="672" width="4" height="5" opacity="0.35"/>
-        <rect x="258" y="680" width="4" height="5" opacity="0.70"/>
-        <rect x="274" y="668" width="4" height="5" opacity="0.50"/>
-        <rect x="352" y="673" width="4" height="5" opacity="0.60"/>
-        <rect x="368" y="653" width="4" height="5" opacity="0.45"/>
-        <rect x="378" y="642" width="4" height="5" opacity="0.55"/>
-        <rect x="390" y="630" width="4" height="5" opacity="0.65"/>
-        <rect x="402" y="642" width="4" height="5" opacity="0.45"/>
-        <rect x="504" y="638" width="4" height="5" opacity="0.70"/>
-        <rect x="516" y="626" width="4" height="5" opacity="0.55"/>
-        <rect x="530" y="614" width="4" height="5" opacity="0.60"/>
-        <rect x="544" y="618" width="4" height="5" opacity="0.45"/>
-        <rect x="556" y="628" width="4" height="5" opacity="0.50"/>
-        <rect x="660" y="600" width="4" height="5" opacity="0.80"/>
-        <rect x="672" y="614" width="4" height="5" opacity="0.65"/>
-        <rect x="684" y="622" width="4" height="5" opacity="0.55"/>
-        <rect x="696" y="610" width="4" height="5" opacity="0.70"/>
-        <rect x="708" y="596" width="4" height="5" opacity="0.60"/>
-        <rect x="724" y="580" width="4" height="5" opacity="0.75"/>
-        <rect x="744" y="572" width="4" height="5" opacity="0.85"/>
-        <rect x="758" y="580" width="4" height="5" opacity="0.75"/>
-        <rect x="772" y="596" width="4" height="5" opacity="0.60"/>
-        <rect x="784" y="610" width="4" height="5" opacity="0.70"/>
-        <rect x="796" y="622" width="4" height="5" opacity="0.55"/>
-        <rect x="808" y="614" width="4" height="5" opacity="0.65"/>
-        <rect x="820" y="600" width="4" height="5" opacity="0.80"/>
-        <rect x="930" y="640" width="4" height="5" opacity="0.60"/>
-        <rect x="946" y="630" width="4" height="5" opacity="0.70"/>
-        <rect x="958" y="640" width="4" height="5" opacity="0.55"/>
-        <rect x="1058" y="660" width="4" height="5" opacity="0.55"/>
-        <rect x="1072" y="646" width="4" height="5" opacity="0.65"/>
-        <rect x="1086" y="658" width="4" height="5" opacity="0.50"/>
-        <rect x="1152" y="670" width="4" height="5" opacity="0.60"/>
-        <rect x="1168" y="658" width="4" height="5" opacity="0.50"/>
-        <rect x="1184" y="668" width="4" height="5" opacity="0.55"/>
-        <rect x="1246" y="693" width="4" height="5" opacity="0.45"/>
-        <rect x="1260" y="692" width="4" height="5" opacity="0.40"/>
+        <!-- Far left low buildings -->
+        <rect x="60"  y="796" width="3" height="4" opacity="0.40"/>
+        <rect x="68"  y="796" width="3" height="4" opacity="0.28"/>
+        <rect x="128" y="790" width="3" height="4" opacity="0.45"/>
+        <rect x="158" y="803" width="3" height="4" opacity="0.35"/>
+        <!-- Mid-left commercial -->
+        <rect x="218" y="762" width="3" height="4" opacity="0.50"/>
+        <rect x="248" y="748" width="3" height="4" opacity="0.40"/>
+        <rect x="272" y="748" width="3" height="4" opacity="0.55"/>
+        <rect x="298" y="736" width="3" height="4" opacity="0.45"/>
+        <rect x="320" y="736" width="3" height="4" opacity="0.38"/>
+        <rect x="348" y="736" width="3" height="4" opacity="0.48"/>
+        <!-- Left approach buildings -->
+        <rect x="396" y="710" width="3" height="4" opacity="0.55"/>
+        <rect x="422" y="698" width="3" height="4" opacity="0.60"/>
+        <rect x="448" y="696" width="3" height="4" opacity="0.48"/>
+        <rect x="468" y="678" width="3" height="4" opacity="0.55"/>
+        <rect x="492" y="660" width="3" height="4" opacity="0.50"/>
+        <rect x="516" y="643" width="3" height="4" opacity="0.58"/>
+        <rect x="534" y="624" width="3" height="4" opacity="0.48"/>
+        <rect x="548" y="606" width="3" height="4" opacity="0.55"/>
+        <!-- Downtown left flank -->
+        <rect x="564" y="588" width="3" height="4" opacity="0.60"/>
+        <rect x="578" y="570" width="3" height="4" opacity="0.52"/>
+        <rect x="592" y="554" width="3" height="4" opacity="0.62"/>
+        <rect x="606" y="538" width="3" height="4" opacity="0.55"/>
+        <rect x="617" y="522" width="3" height="4" opacity="0.65"/>
+        <rect x="628" y="490" width="3" height="4" opacity="0.70"/>
+        <!-- Downtown core — buildings tallest here -->
+        <rect x="642" y="474" width="3" height="4" opacity="0.75"/>
+        <rect x="656" y="460" width="3" height="4" opacity="0.68"/>
+        <rect x="666" y="480" width="3" height="4" opacity="0.80"/>
+        <rect x="676" y="465" width="3" height="4" opacity="0.72"/>
+        <rect x="686" y="476" width="3" height="4" opacity="0.78"/>
+        <rect x="695" y="450" width="3" height="4" opacity="0.85"/>
+        <rect x="703" y="448" width="3" height="4" opacity="0.90"/>
+        <rect x="718" y="472" width="3" height="4" opacity="0.80"/>
+        <rect x="728" y="484" width="3" height="4" opacity="0.74"/>
+        <rect x="738" y="470" width="3" height="4" opacity="0.78"/>
+        <rect x="746" y="482" width="3" height="4" opacity="0.68"/>
+        <rect x="756" y="498" width="3" height="4" opacity="0.65"/>
+        <!-- Downtown right flank -->
+        <rect x="770" y="514" width="3" height="4" opacity="0.60"/>
+        <rect x="784" y="530" width="3" height="4" opacity="0.55"/>
+        <rect x="800" y="546" width="3" height="4" opacity="0.62"/>
+        <rect x="816" y="562" width="3" height="4" opacity="0.55"/>
+        <rect x="832" y="580" width="3" height="4" opacity="0.50"/>
+        <rect x="852" y="598" width="3" height="4" opacity="0.58"/>
+        <rect x="870" y="616" width="3" height="4" opacity="0.52"/>
+        <rect x="890" y="635" width="3" height="4" opacity="0.48"/>
+        <rect x="908" y="654" width="3" height="4" opacity="0.55"/>
+        <!-- Mid-right -->
+        <rect x="945" y="664" width="3" height="4" opacity="0.50"/>
+        <rect x="968" y="680" width="3" height="4" opacity="0.45"/>
+        <rect x="992" y="696" width="3" height="4" opacity="0.52"/>
+        <rect x="1016" y="712" width="3" height="4" opacity="0.48"/>
+        <rect x="1042" y="728" width="3" height="4" opacity="0.45"/>
+        <rect x="1068" y="743" width="3" height="4" opacity="0.42"/>
+        <rect x="1094" y="758" width="3" height="4" opacity="0.38"/>
+        <!-- Far right -->
+        <rect x="1118" y="762" width="3" height="4" opacity="0.35"/>
+        <rect x="1152" y="758" width="3" height="4" opacity="0.38"/>
+        <rect x="1188" y="785" width="3" height="4" opacity="0.32"/>
+        <rect x="1225" y="800" width="3" height="4" opacity="0.28"/>
+        <rect x="1265" y="798" width="3" height="4" opacity="0.28"/>
       </g>
 
       <!-- Readability overlay -->
