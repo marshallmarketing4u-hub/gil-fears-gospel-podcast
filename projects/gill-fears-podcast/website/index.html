@@ -494,14 +494,8 @@
 
   <!-- Sunrise Cityscape Background -->
   <div style="position:absolute; inset:0; z-index:0; pointer-events:none">
-    <img src="assets/images/cityscape-sunrise.png" alt=""
-         style="width:100%; height:100%; object-fit:cover; object-position:center center; display:block;"/>
-    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,10,20,0.78) 0%, rgba(12,10,20,0.40) 38%, rgba(12,10,20,0.20) 65%, rgba(12,10,20,0.72) 100%);"></div>
-  </div>
-  <div style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%; display:block">
       <defs>
-        <!-- Sky: photorealistic sunrise — deep blue-purple to rich amber -->
         <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%"   stop-color="#06080e"/>
           <stop offset="18%"  stop-color="#0c0f1e"/>
@@ -513,203 +507,191 @@
           <stop offset="86%"  stop-color="#e89028"/>
           <stop offset="100%" stop-color="#f0b03a"/>
         </linearGradient>
-        <!-- Sun halo: large warm atmospheric glow -->
         <radialGradient id="sun-halo" cx="50%" cy="67%" r="38%">
-          <stop offset="0%"   stop-color="#FFE060" stop-opacity="0.90"/>
-          <stop offset="15%"  stop-color="#F5A030" stop-opacity="0.72"/>
-          <stop offset="35%"  stop-color="#E06018" stop-opacity="0.40"/>
+          <stop offset="0%"   stop-color="#FFE060" stop-opacity="0.92"/>
+          <stop offset="15%"  stop-color="#F5A030" stop-opacity="0.74"/>
+          <stop offset="35%"  stop-color="#E06018" stop-opacity="0.42"/>
           <stop offset="60%"  stop-color="#8B2c0a" stop-opacity="0.15"/>
           <stop offset="100%" stop-color="#12141a" stop-opacity="0"/>
         </radialGradient>
-        <!-- Sun disk: bright center fading to warm gold, slightly cooler top -->
         <radialGradient id="sun-core" cx="50%" cy="42%" r="50%">
           <stop offset="0%"   stop-color="#FFFFFF"/>
           <stop offset="30%"  stop-color="#FFF5C0"/>
           <stop offset="65%"  stop-color="#FFD04A"/>
           <stop offset="100%" stop-color="#E08820"/>
         </radialGradient>
-        <!-- City gradient: realistic dark blue-gray silhouette -->
         <linearGradient id="city-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#1c2030"/>
-          <stop offset="60%"  stop-color="#141620"/>
-          <stop offset="100%" stop-color="#0e1018"/>
+          <stop offset="0%"   stop-color="#1a1e2c"/>
+          <stop offset="55%"  stop-color="#121420"/>
+          <stop offset="100%" stop-color="#0c0e16"/>
         </linearGradient>
-        <!-- Atmospheric haze gradient at horizon -->
         <linearGradient id="haze-grad" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%"   stop-color="#c85818" stop-opacity="0"/>
           <stop offset="55%"  stop-color="#d87020" stop-opacity="0.14"/>
           <stop offset="100%" stop-color="#e89030" stop-opacity="0.28"/>
         </linearGradient>
-        <!-- Soft glow filter for sun -->
         <filter id="sun-glow" x="-80%" y="-80%" width="260%" height="260%">
           <feGaussianBlur stdDeviation="14" result="blur"/>
           <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
-        <!-- Diffuse outer corona filter -->
         <filter id="sun-corona" x="-120%" y="-120%" width="340%" height="340%">
           <feGaussianBlur stdDeviation="28"/>
         </filter>
         <linearGradient id="read-overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#12141a" stop-opacity="0.72"/>
-          <stop offset="42%"  stop-color="#12141a" stop-opacity="0.36"/>
-          <stop offset="70%"  stop-color="#12141a" stop-opacity="0.20"/>
-          <stop offset="100%" stop-color="#12141a" stop-opacity="0.68"/>
+          <stop offset="0%"   stop-color="#12141a" stop-opacity="0.74"/>
+          <stop offset="40%"  stop-color="#12141a" stop-opacity="0.36"/>
+          <stop offset="68%"  stop-color="#12141a" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#12141a" stop-opacity="0.70"/>
         </linearGradient>
       </defs>
 
       <!-- Sky -->
       <rect width="1440" height="900" fill="url(#sky-grad)"/>
 
-      <!-- Horizon sun halo -->
-      <ellipse cx="720" cy="575" rx="520" ry="260" fill="url(#sun-halo)"/>
+      <!-- Sun halo -->
+      <ellipse cx="720" cy="575" rx="530" ry="265" fill="url(#sun-halo)"/>
 
-      <!-- Sun outer corona (very soft, blurred) -->
-      <ellipse cx="720" cy="575" rx="165" ry="150" fill="#FFB820" opacity="0.36" filter="url(#sun-corona)"/>
-      <ellipse cx="720" cy="575" rx="112" ry="100" fill="#FFD040" opacity="0.44" filter="url(#sun-corona)"/>
+      <!-- Sun corona -->
+      <ellipse cx="720" cy="575" rx="170" ry="155" fill="#FFB820" opacity="0.36" filter="url(#sun-corona)"/>
+      <ellipse cx="720" cy="575" rx="115" ry="105" fill="#FFD040" opacity="0.44" filter="url(#sun-corona)"/>
 
-      <!-- Sun disk — large, oblate morning sun rising above city -->
-      <ellipse cx="720" cy="575" rx="88" ry="80" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
-      <!-- Bright core -->
-      <ellipse cx="720" cy="572" rx="50" ry="45" fill="#FFFFF8" opacity="0.88"/>
+      <!-- Sun disk -->
+      <ellipse cx="720" cy="575" rx="90" ry="82" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
+      <ellipse cx="720" cy="572" rx="52" ry="47" fill="#FFFFF8" opacity="0.88"/>
 
-      <!-- Atmospheric haze band at horizon -->
-      <rect x="0" y="490" width="1440" height="160" fill="url(#haze-grad)"/>
+      <!-- Haze band -->
+      <rect x="0" y="490" width="1440" height="165" fill="url(#haze-grad)"/>
 
-      <!-- Horizon glow bar — subtle, not cartoon-sharp -->
-      <rect x="0" y="596" width="1440" height="4" fill="#D07828" opacity="0.22" rx="2"/>
-
-      <!-- Clouds (lit by sunrise, warm undersides) -->
-      <g fill="rgba(200,120,40,0.07)" stroke="rgba(220,140,60,0.12)" stroke-width="1.2">
-        <ellipse cx="260" cy="580" rx="90" ry="22"/>
-        <ellipse cx="320" cy="568" rx="55" ry="16"/>
-        <ellipse cx="1100" cy="595" rx="80" ry="20"/>
-        <ellipse cx="1155" cy="582" rx="50" ry="14"/>
-        <ellipse cx="520" cy="560" rx="70" ry="18"/>
-        <ellipse cx="940" cy="548" rx="65" ry="17"/>
-      </g>
-
-      <!-- City silhouette — flat-top buildings based on logo reference -->
+      <!-- Bewitched-style city silhouette
+           Clean, bold mid-century American skyline.
+           Main tower center x=720, top y=600.
+           Sun (cy=575, ry=82) rises visibly above the roofline. -->
       <path d="
-        M0,900 L0,805
-        L55,805 L55,790 L100,790 L100,800 L138,800 L138,782 L180,782 L180,795
-        L210,795 L210,768 L252,768 L252,780 L288,780 L288,752 L332,752 L332,765 L368,765
-        L368,738 L410,738 L410,752 L442,752 L442,720 L488,720 L488,738 L522,738
-        L522,705 L565,705 L565,688 L605,688 L605,668 L642,668
-        L642,648 L678,648 L678,632 L714,632
-        L714,615 L745,615 L745,632 L762,632 L762,608 L832,608 L832,628 L868,628 L868,648 L902,648
-        L902,668 L945,668 L945,688 L988,688
-        L988,708 L1032,708 L1032,728 L1078,728 L1078,748 L1125,748
-        L1125,765 L1172,765 L1172,780 L1220,780
-        L1220,792 L1265,792 L1265,780 L1308,780 L1308,798 L1360,798 L1360,810 L1440,810
-        L1440,900 Z
+        M0,900 L0,815
+        L80,815 L80,796 L158,796 L158,815
+        L196,815 L196,774 L288,774 L288,790 L332,790 L332,752 L424,752 L424,768
+        L462,768 L462,730 L548,730 L548,704 L636,704 L636,676
+        L698,676 L698,650 L716,650 L716,626 L762,626
+        L762,600 L800,600 L800,582 L840,582 L840,600 L878,600
+        L878,626 L924,626 L924,650 L942,650 L942,676
+        L1004,676 L1004,704 L1092,704 L1092,730 L1178,730 L1178,768
+        L1216,768 L1216,752 L1308,752 L1308,790 L1352,790 L1352,774 L1444,774
+        L1444,900 Z
       " fill="url(#city-grad)"/>
 
-      <!-- Antenna on signature tower -->
-      <rect x="793" y="578" width="3" height="30" fill="#161824"/>
-      <circle cx="794.5" cy="577" r="2.5" fill="#161824"/>
-
-      <!-- Building windows — warm pre-dawn lights, placed within building bounds -->
-      <g fill="#F0D880">
-        <!-- Far left -->
-        <rect x="22"  y="808" width="4" height="5" opacity="0.38"/>
-        <rect x="70"  y="794" width="4" height="5" opacity="0.42"/>
-        <rect x="78"  y="794" width="4" height="5" opacity="0.28"/>
-        <rect x="148" y="786" width="4" height="5" opacity="0.45"/>
-        <!-- Left mid-rise -->
-        <rect x="222" y="772" width="4" height="5" opacity="0.50"/>
-        <rect x="234" y="772" width="4" height="5" opacity="0.35"/>
-        <rect x="298" y="756" width="4" height="5" opacity="0.48"/>
-        <rect x="310" y="756" width="4" height="5" opacity="0.32"/>
-        <!-- Left commercial -->
-        <rect x="380" y="742" width="4" height="5" opacity="0.55"/>
-        <rect x="392" y="742" width="4" height="5" opacity="0.40"/>
-        <rect x="404" y="742" width="4" height="5" opacity="0.45"/>
-        <rect x="456" y="724" width="4" height="5" opacity="0.58"/>
-        <rect x="468" y="724" width="4" height="5" opacity="0.42"/>
-        <!-- Downtown approach -->
-        <rect x="530" y="710" width="4" height="5" opacity="0.55"/>
-        <rect x="542" y="710" width="4" height="5" opacity="0.40"/>
-        <rect x="574" y="692" width="4" height="5" opacity="0.60"/>
-        <rect x="586" y="692" width="4" height="5" opacity="0.45"/>
-        <rect x="614" y="672" width="4" height="5" opacity="0.58"/>
-        <rect x="626" y="672" width="4" height="5" opacity="0.42"/>
-        <!-- Downtown left flank -->
-        <rect x="650" y="654" width="4" height="5" opacity="0.65"/>
-        <rect x="662" y="654" width="4" height="5" opacity="0.50"/>
-        <rect x="650" y="668" width="4" height="5" opacity="0.42"/>
-        <rect x="686" y="638" width="4" height="5" opacity="0.68"/>
-        <rect x="698" y="638" width="4" height="5" opacity="0.52"/>
-        <rect x="686" y="652" width="4" height="5" opacity="0.45"/>
-        <!-- Narrow tower (Building A, x=714-745) -->
-        <rect x="718" y="620" width="4" height="5" opacity="0.72"/>
-        <rect x="726" y="620" width="4" height="5" opacity="0.58"/>
-        <rect x="734" y="620" width="4" height="5" opacity="0.65"/>
-        <rect x="718" y="634" width="4" height="5" opacity="0.55"/>
-        <rect x="726" y="634" width="4" height="5" opacity="0.40"/>
-        <rect x="718" y="648" width="4" height="5" opacity="0.48"/>
-        <rect x="734" y="648" width="4" height="5" opacity="0.60"/>
-        <!-- Signature tower (x=762-832, widest/tallest) -->
-        <rect x="768" y="616" width="4" height="5" opacity="0.80"/>
-        <rect x="778" y="616" width="4" height="5" opacity="0.62"/>
-        <rect x="788" y="616" width="4" height="5" opacity="0.75"/>
-        <rect x="800" y="616" width="4" height="5" opacity="0.55"/>
-        <rect x="812" y="616" width="4" height="5" opacity="0.70"/>
-        <rect x="822" y="616" width="4" height="5" opacity="0.60"/>
-        <rect x="770" y="630" width="4" height="5" opacity="0.65"/>
-        <rect x="782" y="630" width="4" height="5" opacity="0.82"/>
-        <rect x="794" y="630" width="4" height="5" opacity="0.58"/>
-        <rect x="806" y="630" width="4" height="5" opacity="0.72"/>
-        <rect x="818" y="630" width="4" height="5" opacity="0.50"/>
-        <rect x="772" y="644" width="4" height="5" opacity="0.55"/>
-        <rect x="784" y="644" width="4" height="5" opacity="0.68"/>
-        <rect x="798" y="644" width="4" height="5" opacity="0.45"/>
-        <rect x="810" y="644" width="4" height="5" opacity="0.62"/>
-        <rect x="822" y="644" width="4" height="5" opacity="0.48"/>
-        <rect x="774" y="658" width="4" height="5" opacity="0.60"/>
-        <rect x="788" y="658" width="4" height="5" opacity="0.45"/>
-        <rect x="802" y="658" width="4" height="5" opacity="0.70"/>
-        <rect x="816" y="658" width="4" height="5" opacity="0.52"/>
-        <!-- Building D (x=832-868) -->
-        <rect x="838" y="634" width="4" height="5" opacity="0.72"/>
-        <rect x="850" y="634" width="4" height="5" opacity="0.55"/>
-        <rect x="860" y="634" width="4" height="5" opacity="0.65"/>
-        <rect x="840" y="648" width="4" height="5" opacity="0.50"/>
-        <rect x="854" y="648" width="4" height="5" opacity="0.68"/>
-        <!-- Building E (x=868-902) -->
-        <rect x="876" y="654" width="4" height="5" opacity="0.60"/>
-        <rect x="888" y="654" width="4" height="5" opacity="0.45"/>
-        <rect x="876" y="668" width="4" height="5" opacity="0.52"/>
-        <!-- Downtown right -->
-        <rect x="912" y="672" width="4" height="5" opacity="0.55"/>
-        <rect x="926" y="672" width="4" height="5" opacity="0.42"/>
-        <rect x="954" y="692" width="4" height="5" opacity="0.50"/>
-        <rect x="968" y="692" width="4" height="5" opacity="0.38"/>
-        <!-- Right approach -->
-        <rect x="1002" y="712" width="4" height="5" opacity="0.45"/>
-        <rect x="1016" y="712" width="4" height="5" opacity="0.32"/>
-        <rect x="1046" y="732" width="4" height="5" opacity="0.42"/>
-        <rect x="1062" y="732" width="4" height="5" opacity="0.30"/>
-        <rect x="1092" y="752" width="4" height="5" opacity="0.38"/>
-        <!-- Far right -->
-        <rect x="1140" y="770" width="4" height="5" opacity="0.32"/>
-        <rect x="1190" y="784" width="4" height="5" opacity="0.28"/>
-        <rect x="1278" y="784" width="4" height="5" opacity="0.28"/>
-        <rect x="1325" y="802" width="4" height="5" opacity="0.22"/>
-      </g>
-
-      <!-- Rooftop warm rim — matches flat-top building profile -->
+      <!-- Rooftop sunrise rim light -->
       <path d="
-        M0,805 L55,805 L55,790 L100,790 L100,800 L138,800 L138,782 L180,782 L180,795
-        L210,795 L210,768 L252,768 L252,780 L288,780 L288,752 L332,752 L332,765 L368,765
-        L368,738 L410,738 L410,752 L442,752 L442,720 L488,720 L488,738 L522,738
-        L522,705 L565,705 L565,688 L605,688 L605,668 L642,668
-        L642,648 L678,648 L678,632 L714,632
-        L714,615 L745,615 L745,632 L762,632 L762,608 L832,608 L832,628 L868,628 L868,648 L902,648
-        L902,668 L945,668 L945,688 L988,688
-        L988,708 L1032,708 L1032,728 L1078,728 L1078,748 L1125,748
-        L1125,765 L1172,765 L1172,780 L1220,780
-        L1220,792 L1265,792 L1265,780 L1308,780 L1308,798 L1360,798 L1360,810 L1440,810
-      " fill="none" stroke="rgba(210,145,55,0.09)" stroke-width="1" stroke-linejoin="round"/>
+        M0,815 L80,815 L80,796 L158,796 L158,815
+        L196,815 L196,774 L288,774 L288,790 L332,790 L332,752 L424,752 L424,768
+        L462,768 L462,730 L548,730 L548,704 L636,704 L636,676
+        L698,676 L698,650 L716,650 L716,626 L762,626
+        L762,600 L800,600 L800,582 L840,582 L840,600 L878,600
+        L878,626 L924,626 L924,650 L942,650 L942,676
+        L1004,676 L1004,704 L1092,704 L1092,730 L1178,730 L1178,768
+        L1216,768 L1216,752 L1308,752 L1308,790 L1352,790 L1352,774 L1444,774
+      " fill="none" stroke="rgba(220,150,60,0.12)" stroke-width="1.5" stroke-linejoin="round"/>
+
+      <!-- Antenna on main tower crown -->
+      <line x1="820" y1="582" x2="820" y2="558" stroke="#141820" stroke-width="2.5"/>
+      <circle cx="820" cy="557" r="3" fill="#141820"/>
+
+      <!-- Water tower — left cluster, x~270, top of y=774 building -->
+      <rect x="264" y="762" width="8" height="12" fill="#121420" rx="1"/>
+      <ellipse cx="268" cy="762" rx="13" ry="5" fill="#121420"/>
+
+      <!-- Water tower — right cluster -->
+      <rect x="1160" y="756" width="8" height="12" fill="#121420" rx="1"/>
+      <ellipse cx="1164" cy="756" rx="13" ry="5" fill="#121420"/>
+
+      <!-- Pre-dawn window lights — clean grid placement -->
+      <g fill="#F0D880">
+        <!-- Far left low buildings -->
+        <rect x="30"  y="800" width="5" height="6" opacity="0.32"/>
+        <rect x="112" y="800" width="5" height="6" opacity="0.28"/>
+        <!-- Left cluster (y=774) -->
+        <rect x="212" y="778" width="5" height="6" opacity="0.42"/>
+        <rect x="226" y="778" width="5" height="6" opacity="0.30"/>
+        <rect x="250" y="778" width="5" height="6" opacity="0.38"/>
+        <!-- Left mid (y=752) -->
+        <rect x="348" y="756" width="5" height="6" opacity="0.48"/>
+        <rect x="364" y="756" width="5" height="6" opacity="0.35"/>
+        <rect x="380" y="756" width="5" height="6" opacity="0.42"/>
+        <rect x="396" y="756" width="5" height="6" opacity="0.28"/>
+        <!-- Left approach (y=730) -->
+        <rect x="474" y="734" width="5" height="6" opacity="0.52"/>
+        <rect x="490" y="734" width="5" height="6" opacity="0.38"/>
+        <rect x="510" y="734" width="5" height="6" opacity="0.45"/>
+        <!-- Left tall (y=704) -->
+        <rect x="558" y="708" width="5" height="6" opacity="0.55"/>
+        <rect x="576" y="708" width="5" height="6" opacity="0.40"/>
+        <rect x="594" y="708" width="5" height="6" opacity="0.48"/>
+        <rect x="612" y="708" width="5" height="6" opacity="0.35"/>
+        <!-- Left high (y=676) -->
+        <rect x="648" y="680" width="5" height="6" opacity="0.60"/>
+        <rect x="666" y="680" width="5" height="6" opacity="0.44"/>
+        <rect x="684" y="680" width="5" height="6" opacity="0.52"/>
+        <!-- Left flank tower (y=650) -->
+        <rect x="700" y="654" width="5" height="6" opacity="0.65"/>
+        <rect x="700" y="668" width="5" height="6" opacity="0.48"/>
+        <!-- Left pre-tower (y=626) -->
+        <rect x="720" y="630" width="5" height="6" opacity="0.70"/>
+        <rect x="734" y="630" width="5" height="6" opacity="0.55"/>
+        <rect x="748" y="630" width="5" height="6" opacity="0.62"/>
+        <rect x="720" y="644" width="5" height="6" opacity="0.52"/>
+        <rect x="748" y="644" width="5" height="6" opacity="0.45"/>
+        <!-- Main tower (y=600 base, crown y=582) -->
+        <rect x="768" y="604" width="5" height="6" opacity="0.78"/>
+        <rect x="782" y="604" width="5" height="6" opacity="0.60"/>
+        <rect x="796" y="604" width="5" height="6" opacity="0.70"/>
+        <rect x="810" y="604" width="5" height="6" opacity="0.55"/>
+        <rect x="824" y="604" width="5" height="6" opacity="0.68"/>
+        <rect x="854" y="604" width="5" height="6" opacity="0.62"/>
+        <rect x="866" y="604" width="5" height="6" opacity="0.50"/>
+        <rect x="770" y="618" width="5" height="6" opacity="0.65"/>
+        <rect x="786" y="618" width="5" height="6" opacity="0.80"/>
+        <rect x="802" y="618" width="5" height="6" opacity="0.55"/>
+        <rect x="820" y="618" width="5" height="6" opacity="0.70"/>
+        <rect x="850" y="618" width="5" height="6" opacity="0.58"/>
+        <rect x="864" y="618" width="5" height="6" opacity="0.45"/>
+        <!-- Crown windows -->
+        <rect x="806" y="586" width="5" height="6" opacity="0.72"/>
+        <rect x="820" y="586" width="5" height="6" opacity="0.58"/>
+        <rect x="834" y="586" width="5" height="6" opacity="0.65"/>
+        <!-- Right pre-tower (y=626) -->
+        <rect x="884" y="630" width="5" height="6" opacity="0.70"/>
+        <rect x="898" y="630" width="5" height="6" opacity="0.55"/>
+        <rect x="912" y="630" width="5" height="6" opacity="0.62"/>
+        <rect x="884" y="644" width="5" height="6" opacity="0.52"/>
+        <rect x="912" y="644" width="5" height="6" opacity="0.45"/>
+        <!-- Right flank (y=650) -->
+        <rect x="930" y="654" width="5" height="6" opacity="0.65"/>
+        <rect x="930" y="668" width="5" height="6" opacity="0.48"/>
+        <!-- Right high (y=676) -->
+        <rect x="952" y="680" width="5" height="6" opacity="0.60"/>
+        <rect x="970" y="680" width="5" height="6" opacity="0.44"/>
+        <rect x="988" y="680" width="5" height="6" opacity="0.52"/>
+        <!-- Right tall (y=704) -->
+        <rect x="1014" y="708" width="5" height="6" opacity="0.55"/>
+        <rect x="1032" y="708" width="5" height="6" opacity="0.40"/>
+        <rect x="1050" y="708" width="5" height="6" opacity="0.48"/>
+        <rect x="1068" y="708" width="5" height="6" opacity="0.35"/>
+        <!-- Right approach (y=730) -->
+        <rect x="1102" y="734" width="5" height="6" opacity="0.52"/>
+        <rect x="1120" y="734" width="5" height="6" opacity="0.38"/>
+        <rect x="1140" y="734" width="5" height="6" opacity="0.45"/>
+        <!-- Right mid (y=752) -->
+        <rect x="1228" y="756" width="5" height="6" opacity="0.48"/>
+        <rect x="1244" y="756" width="5" height="6" opacity="0.35"/>
+        <rect x="1260" y="756" width="5" height="6" opacity="0.42"/>
+        <rect x="1276" y="756" width="5" height="6" opacity="0.28"/>
+        <!-- Right cluster (y=774) -->
+        <rect x="1360" y="778" width="5" height="6" opacity="0.42"/>
+        <rect x="1376" y="778" width="5" height="6" opacity="0.30"/>
+        <rect x="1396" y="778" width="5" height="6" opacity="0.38"/>
+        <!-- Far right -->
+        <rect x="1290" y="794" width="5" height="6" opacity="0.28"/>
+        <rect x="1410" y="800" width="5" height="6" opacity="0.22"/>
+      </g>
 
       <!-- Readability overlay -->
       <rect width="1440" height="900" fill="url(#read-overlay)"/>
