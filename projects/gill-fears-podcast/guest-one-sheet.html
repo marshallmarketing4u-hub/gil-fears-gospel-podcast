@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gil Fears — Guest One-Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f4f1eb;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 850px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #2E323C;
+      padding: 48px 52px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .photo-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #C9A84C;
+      flex-shrink: 0;
+    }
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 12%;
+      transform: scale(1.22);
+      transform-origin: center 12%;
+    }
+
+    .header-text {}
+    .show-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 10px;
+    }
+    .host-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 46px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .show-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+      color: #C9A84C;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .header-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.70);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── Gold bar ── */
+    .gold-bar {
+      height: 4px;
+      background: linear-gradient(to right, #C9A84C, #F0D880, #C9A84C);
+    }
+
+    /* ── Body ── */
+    .body {
+      padding: 44px 52px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+    }
+
+    /* Left column */
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 12px;
+    }
+
+    .bio p {
+      font-size: 15px;
+      line-height: 1.80;
+      color: #333;
+      margin-bottom: 14px;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+
+    .divider {
+      height: 1px;
+      background: #e8e2d6;
+      margin: 28px 0;
+    }
+
+    .questions ol {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .questions li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .q-num {
+      font-weight: 700;
+      color: #C9A84C;
+      font-size: 13px;
+      padding-top: 1px;
+    }
+
+    /* Right column */
+    .sidebar {}
+    .sidebar-block {
+      margin-bottom: 28px;
+    }
+    .sidebar-block:last-child { margin-bottom: 0; }
+
+    .topics ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .topics li {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .topics li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #C9A84C;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .show-stats {
+      background: #f8f5ef;
+      border: 1px solid #e8e2d6;
+      border-left: 3px solid #C9A84C;
+      border-radius: 6px;
+      padding: 18px;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid #ede8de;
+      font-size: 13px;
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-label { color: #777; }
+    .stat-value { font-weight: 600; color: #2E323C; }
+
+    .contact-block {
+      background: #2E323C;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .contact-block .section-label { color: #C9A84C; }
+    .contact-line {
+      font-size: 13px;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.8;
+    }
+    .contact-line a {
+      color: #C9A84C;
+      text-decoration: none;
+    }
+    .contact-line strong {
+      color: white;
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+    .contact-line strong:first-child { margin-top: 0; }
+
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .platform-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #2E323C;
+      background: #f0eade;
+      border: 1px solid #d4c9a8;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #2E323C;
+      padding: 18px 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-left {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
+    .footer-right {
+      font-size: 12px;
+      color: #C9A84C;
+      font-weight: 500;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; max-width: 100%; }
+      @page { margin: 0; size: letter; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="photo-wrap">
+      <img src="website/assets/gil-fears.jpg" alt="Gil Fears">
+    </div>
+    <div class="header-text">
+      <div class="show-label">Guest One-Sheet</div>
+      <div class="host-name">Gil Fears</div>
+      <div class="show-title">The Gil Fears "It's A New Day" Gospel Podcast</div>
+      <div class="header-pills">
+        <span class="pill">Gospel</span>
+        <span class="pill">Faith</span>
+        <span class="pill">Inspiration</span>
+        <span class="pill">Music</span>
+        <span class="pill">Daily Broadcast</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-bar"></div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Left: Bio + Questions -->
+    <div>
+
+      <!-- Bio -->
+      <div class="bio">
+        <div class="section-label">About Gil</div>
+        <p>
+          Gil Fears is a preacher, pastor, and storyteller whose voice has moved congregations for decades. Known for his warmth, unshakeable faith, and gift for meeting people exactly where they are, Gil has built a life around one mission: sharing the transformative power of the gospel in a way that is real, relevant, and impossible to ignore.
+        </p>
+        <p>
+          His daily podcast, <em>The Gil Fears "It's A New Day" Gospel Podcast</em>, is a fresh broadcast of faith — equal parts music, scripture, teaching, and raw conversation. Every episode is a reminder that no matter what yesterday looked like, today is a new day with God.
+        </p>
+        <p>
+          Gil brings the same energy to a microphone that he brings to a pulpit: conviction, compassion, and a story that draws you in and doesn't let go.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Interview Questions -->
+      <div class="questions">
+        <div class="section-label">Suggested Interview Questions</div>
+        <ol>
+          <li>
+            <span class="q-num">1.</span>
+            <span>What does "It's A New Day" mean to you personally — and why did that become the heartbeat of your show?</span>
+          </li>
+          <li>
+            <span class="q-num">2.</span>
+            <span>You've been preaching for decades. What made you decide to step into the podcast space now?</span>
+          </li>
+          <li>
+            <span class="q-num">3.</span>
+            <span>How do you keep the gospel fresh and relevant for people who feel like they've heard it all before?</span>
+          </li>
+          <li>
+            <span class="q-num">4.</span>
+            <span>What's the one thing you want every listener to walk away believing after they hear your show?</span>
+          </li>
+          <li>
+            <span class="q-num">5.</span>
+            <span>Talk to us about the New Day Family — what are you building, and who is it for?</span>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+
+    <!-- Right: Sidebar -->
+    <div class="sidebar">
+
+      <!-- Topics -->
+      <div class="sidebar-block topics">
+        <div class="section-label">Gil Speaks On</div>
+        <ul>
+          <li>Faith and daily spiritual practice</li>
+          <li>The power of gospel music</li>
+          <li>Preaching in the digital age</li>
+          <li>Building community around faith</li>
+          <li>Personal testimony and transformation</li>
+          <li>Inspiration for the everyday believer</li>
+          <li>The role of the church in modern culture</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Show Stats -->
+      <div class="sidebar-block">
+        <div class="section-label">The Show</div>
+        <div class="show-stats">
+          <div class="stat-row">
+            <span class="stat-label">Format</span>
+            <span class="stat-value">Daily broadcast</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Length</span>
+            <span class="stat-value">60 min (free)</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Member extended</span>
+            <span class="stat-value">+60 min</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Category</span>
+            <span class="stat-value">Gospel / Faith</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Platforms -->
+      <div class="sidebar-block">
+        <div class="section-label">Available On</div>
+        <div class="platforms">
+          <span class="platform-tag">Apple Podcasts</span>
+          <span class="platform-tag">Spotify</span>
+          <span class="platform-tag">YouTube</span>
+          <span class="platform-tag">iHeart Radio</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Contact -->
+      <div class="sidebar-block">
+        <div class="contact-block">
+          <div class="section-label">Booking & Contact</div>
+          <div class="contact-line">
+            <strong>Managed by</strong>
+            RLM Marketing Agency LLC
+            <strong>Email</strong>
+            <a href="mailto:rlmarshall2@yahoo.com">rlmarshall2@yahoo.com</a>
+            <strong>Response time</strong>
+            Within 24 hours
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-left">© 2026 Gil Fears. All rights reserved. Managed by RLM Marketing Agency LLC.</div>
+    <div class="footer-right">It's A New Day.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
