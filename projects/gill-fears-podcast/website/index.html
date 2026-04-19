@@ -377,8 +377,8 @@
     .hero-text  { order: 2; }
     .hero-art   { order: 1; display: flex; justify-content: center; }
     @media (min-width: 1024px) {
-      .hero-text { order: 1; }
-      .hero-art  { order: 2; justify-content: flex-end; }
+      .hero-text { order: 2; }
+      .hero-art  { order: 1; justify-content: flex-start; }
     }
 
     /* Line clamp for episode description */
@@ -544,7 +544,7 @@
           <stop offset="100%" stop-color="#12141a" stop-opacity="0.70"/>
         </linearGradient>
         <!-- Sunrise warmth that bleeds through the dark overlay onto building faces -->
-        <radialGradient id="city-glow" cx="50%" cy="67%" r="55%">
+        <radialGradient id="city-glow" cx="57%" cy="67%" r="55%">
           <stop offset="0%"   stop-color="#c86418" stop-opacity="0.38"/>
           <stop offset="40%"  stop-color="#8b3a0a" stop-opacity="0.18"/>
           <stop offset="100%" stop-color="#0a0808"  stop-opacity="0"/>
@@ -554,16 +554,16 @@
       <!-- Sky -->
       <rect width="1440" height="900" fill="url(#sky-grad)"/>
 
-      <!-- Sun halo -->
-      <ellipse cx="720" cy="575" rx="530" ry="265" fill="url(#sun-halo)"/>
+      <!-- Sun halo — centered on main tower x=820 -->
+      <ellipse cx="820" cy="575" rx="560" ry="280" fill="url(#sun-halo)"/>
 
       <!-- Sun corona -->
-      <ellipse cx="720" cy="575" rx="170" ry="155" fill="#FFB820" opacity="0.36" filter="url(#sun-corona)"/>
-      <ellipse cx="720" cy="575" rx="115" ry="105" fill="#FFD040" opacity="0.44" filter="url(#sun-corona)"/>
+      <ellipse cx="820" cy="575" rx="210" ry="190" fill="#FFB820" opacity="0.36" filter="url(#sun-corona)"/>
+      <ellipse cx="820" cy="575" rx="145" ry="132" fill="#FFD040" opacity="0.44" filter="url(#sun-corona)"/>
 
-      <!-- Sun disk -->
-      <ellipse cx="720" cy="575" rx="90" ry="82" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
-      <ellipse cx="720" cy="572" rx="52" ry="47" fill="#FFFFF8" opacity="0.88"/>
+      <!-- Sun disk — enlarged -->
+      <ellipse cx="820" cy="575" rx="115" ry="105" fill="url(#sun-core)" filter="url(#sun-glow)" opacity="0.97"/>
+      <ellipse cx="820" cy="572" rx="66" ry="60" fill="#FFFFF8" opacity="0.88"/>
 
       <!-- Haze band -->
       <rect x="0" y="490" width="1440" height="165" fill="url(#haze-grad)"/>
@@ -625,9 +625,9 @@
         <line x1="1352" y1="774" x2="1352" y2="900"/>
       </g>
 
-      <!-- Antenna on main tower crown -->
-      <line x1="820" y1="582" x2="820" y2="558" stroke="#141820" stroke-width="2.5"/>
-      <circle cx="820" cy="557" r="3" fill="#141820"/>
+      <!-- Antenna on main tower crown — crown center x=820 -->
+      <line x1="820" y1="582" x2="820" y2="555" stroke="#1e2438" stroke-width="2.5"/>
+      <circle cx="820" cy="554" r="3" fill="#1e2438"/>
 
       <!-- Water tower — left cluster, x~270, top of y=774 building -->
       <rect x="264" y="762" width="8" height="12" fill="#121420" rx="1"/>
@@ -637,8 +637,8 @@
       <rect x="1160" y="756" width="8" height="12" fill="#121420" rx="1"/>
       <ellipse cx="1164" cy="756" rx="13" ry="5" fill="#121420"/>
 
-      <!-- Pre-dawn window lights — clean grid placement -->
-      <g fill="#F0D880">
+      <!-- Pre-dawn window lights — boosted to punch through overlay -->
+      <g fill="#FFE090">
         <!-- Far left low buildings -->
         <rect x="30"  y="800" width="5" height="6" opacity="0.32"/>
         <rect x="112" y="800" width="5" height="6" opacity="0.28"/>
