@@ -125,48 +125,22 @@ p + p { margin-top: 0.875em; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 96px;
   gap: 1rem;
 }
 
 .nav-logo {
-  color: var(--slate);
   flex-shrink: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
   text-decoration: none;
-  transition: color var(--fast) var(--ease);
 }
 
 .nav-logo-img {
-  height: 34px;
-  width: 34px;
+  height: 80px;
+  width: auto;
   object-fit: contain;
   flex-shrink: 0;
-}
-.nav-logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-.nav-logo-text .brand {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 0.875rem;
-  letter-spacing: -0.01em;
-  color: inherit;
-}
-.site-header:not(.scrolled) .nav-logo { color: var(--bone); }
-.site-header:not(.scrolled) .nav-logo .tagline { color: rgba(251,248,242,0.6); }
-.nav-logo .tagline {
-  font-weight: 400;
-  font-size: 0.625rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--stone);
-  transition: color var(--fast) var(--ease);
 }
 
 .nav-links {
@@ -378,14 +352,14 @@ p + p { margin-top: 0.875em; }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: clamp(5rem, 10vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
+  padding: clamp(7rem, 13vw, 12rem) 0 clamp(6rem, 10vw, 10rem);
   position: relative;
   overflow: hidden;
   background: var(--slate);
 }
 .hero:not(.hero-light) {
-  margin-top: -64px;
-  padding-top: calc(clamp(5rem, 10vw, 9rem) + 64px);
+  margin-top: -96px;
+  padding-top: calc(clamp(7rem, 13vw, 12rem) + 96px);
 }
 .hero-bg {
   position: absolute;
