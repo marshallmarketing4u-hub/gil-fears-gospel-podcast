@@ -72,6 +72,20 @@ Safe Haven Asset Group is a private real estate acquisition company. They help p
 
 ---
 
+## Vercel Deployment
+
+Use these settings when deploying the Safe Haven site to Vercel:
+
+1. Set the Vercel Root Directory to `projects/safe-haven-asset-group/website`
+2. Do not deploy from the repo root, or Vercel may serve the Gil Fears site instead
+3. Keep all website assets referenced by the Safe Haven HTML inside `website/`
+4. The logo path for deployed pages is `assets/brand/logo-primary.png`
+5. The homepage structured-data logo URL should point to `https://[[DOMAIN]]/assets/brand/logo-primary.png`
+6. After deploy, verify `/` and `/assets/brand/logo-primary.png` both return `200`
+7. If the custom domain is attached to the wrong Vercel project, reassign it to the Safe Haven project before testing
+
+---
+
 ## Notes
 
 - `/options` slug is intentional — not `/foreclosure`. Do not change.
