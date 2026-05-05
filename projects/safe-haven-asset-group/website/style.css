@@ -386,12 +386,29 @@ p + p { margin-top: 0.875em; }
   color: var(--brass);
   margin-bottom: 1.25rem;
 }
-.hero-logo {
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+.hero-brand-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-brand-img {
   display: block;
-  height: clamp(120px, 18vw, 180px);
-  width: auto;
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  max-height: 540px;
   object-fit: contain;
-  margin: 0 0 1.75rem;
+}
+@media (max-width: 800px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-brand-visual { order: -1; }
+  .hero-brand-img { max-width: 320px; }
 }
 
 .hero h1 { color: var(--bone); margin-bottom: 1.25rem; }
