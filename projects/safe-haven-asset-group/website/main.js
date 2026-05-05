@@ -8,7 +8,8 @@
 (function () {
   const header = document.querySelector('.site-header');
   if (!header) return;
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 80);
+  const hasLightHero = !!document.querySelector('.hero-light');
+  const onScroll = () => header.classList.toggle('scrolled', hasLightHero || window.scrollY > 80);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
