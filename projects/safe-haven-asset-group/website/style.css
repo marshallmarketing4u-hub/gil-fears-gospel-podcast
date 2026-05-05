@@ -355,7 +355,7 @@ p + p { margin-top: 0.875em; }
   padding: clamp(7rem, 13vw, 12rem) 0 clamp(6rem, 10vw, 10rem);
   position: relative;
   overflow: hidden;
-  background: var(--slate);
+  background: var(--ink);
 }
 .hero:not(.hero-light) {
   margin-top: -96px;
@@ -401,14 +401,14 @@ p + p { margin-top: 0.875em; }
   display: block;
   width: 100%;
   height: auto;
-  max-width: 480px;
-  max-height: 540px;
+  max-width: 552px;
+  max-height: 620px;
   object-fit: contain;
 }
 @media (max-width: 800px) {
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-brand-visual { order: -1; }
-  .hero-brand-img { max-width: 320px; }
+  .hero-brand-img { max-width: 368px; }
 }
 
 .hero h1 { color: var(--bone); margin-bottom: 1.25rem; }
