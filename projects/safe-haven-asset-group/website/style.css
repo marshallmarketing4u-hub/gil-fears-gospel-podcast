@@ -412,6 +412,13 @@ p + p { margin-top: 0.875em; }
   color: var(--brass);
   margin-bottom: 1.25rem;
 }
+.hero-logo {
+  display: block;
+  height: clamp(120px, 18vw, 180px);
+  width: auto;
+  object-fit: contain;
+  margin: 0 0 1.75rem;
+}
 
 .hero h1 { color: var(--bone); margin-bottom: 1.25rem; }
 
