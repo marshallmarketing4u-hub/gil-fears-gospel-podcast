@@ -448,7 +448,7 @@ p + p { margin-top: 0.875em; }
 .section { padding: var(--section-pad) 0; }
 .section-cream { background: var(--cream); }
 .section-bone { background: var(--bone); }
-.section-slate { background: var(--slate); }
+.section-slate { background: #000; }
 .section-slate h2, .section-slate h3, .section-slate p { color: rgba(251,248,242,0.85); }
 .section-slate h2 { color: var(--bone); }
 
@@ -811,7 +811,7 @@ select.form-control {
 
 /* ---------- CTA Banner ---------- */
 .cta-banner {
-  background: var(--slate);
+  background: #000;
   padding: clamp(3.5rem, 7vw, 6rem) 0;
   text-align: center;
 }
@@ -833,7 +833,7 @@ select.form-control {
 
 /* Pre-footer band */
 .pre-footer {
-  background: var(--ink);
+  background: #000;
   border-top: 1px solid rgba(255,255,255,0.05);
   padding: 1.25rem 0;
 }
@@ -854,7 +854,7 @@ select.form-control {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--slate);
+  background: #000;
   color: rgba(251,248,242,0.72);
   padding: clamp(3.5rem, 6vw, 5rem) 0 0;
 }
@@ -970,7 +970,7 @@ select.form-control {
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 90;
-  background: var(--ink);
+  background: #000;
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 0.75rem 1.25rem;
   display: flex;
